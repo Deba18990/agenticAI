@@ -1,0 +1,23 @@
+import { Link } from 'react-router-dom';
+
+function DashboardPage({ onLogout }) {
+  return (
+    <div className="app-shell">
+      <div className="card dashboard-card">
+        <h1>Dashboard</h1>
+        <p>You have successfully logged in.</p>
+        <p className="sidebar-note">Use the sidebar to navigate between sections of the app.</p>
+        <div className="dashboard-actions">
+          <Link className="button button-login" to="/settings">
+            Go to Settings
+          </Link>
+          <button className="button button-logout" onClick={onLogout}>
+            Log Out
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default DashboardPage;
