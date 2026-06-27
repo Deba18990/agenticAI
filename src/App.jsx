@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
+import Settings from './pages/Settings';
 
 const validCredentials = {
   username: 'user',
@@ -44,6 +45,16 @@ function App() {
           element={
             isLoggedIn ? (
               <DashboardPage onLogout={handleLogout} />
+            ) : (
+              <Navigate to="/" replace />
+            )
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            isLoggedIn ? (
+              <Settings onLogout={handleLogout} />
             ) : (
               <Navigate to="/" replace />
             )

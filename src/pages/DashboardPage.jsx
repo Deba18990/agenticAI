@@ -7,8 +7,8 @@ function DashboardPage({ onLogout }) {
         <h1>Dashboard</h1>
         <p>You have successfully logged in.</p>
         <div className="dashboard-actions">
-          <Link className="button button-login" to="/">
-            Go to Login
+          <Link className="button button-login" to="/settings">
+            Go to Settings
           </Link>
           <button className="button button-logout" onClick={onLogout}>
             Log Out
