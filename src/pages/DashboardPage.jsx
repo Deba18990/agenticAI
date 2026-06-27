@@ -6,6 +6,7 @@ function DashboardPage({ onLogout }) {
       <div className="card dashboard-card">
         <h1>Dashboard</h1>
         <p>You have successfully logged in.</p>
+        <p className="sidebar-note">Use the sidebar to navigate between sections of the app.</p>
         <div className="dashboard-actions">
           <Link className="button button-login" to="/settings">
             Go to Settings
